@@ -48,15 +48,15 @@ public class HomeWork4 {
         double[] two = {1.57, 7.654, 9.986, 10.01, 11, 1};
         int[] Three = {1, 2, 3, 4, 5, 6, 7, 8, 9,};
         for (int i = one.length - 1; i >= 0; i--) {
-            System.out.print(one[i] + " , ");
+            System.out.print(" , " + one[i]);
         }
         System.out.println();
         for (int a = two.length - 1; a >= 0; a--) {
-            System.out.print(two[a] + " , ");
+            System.out.print( " , " + two[a]);
         }
         System.out.println();
         for (int d = Three.length - 1; d >= 0; d--) {
-            System.out.print(Three[d] + " , ");
+            System.out.print( "," + Three[d]);
         }
         System.out.println();
     }
@@ -98,8 +98,8 @@ public class HomeWork4 {
     public static void task6() {
         System.out.println(" Задача № 6 ");
         int[] a = generateRandomArray();
-        int max = 10;
-        int min = 1000000;
+        int max = a[0];
+        int min = a [0];
         for (int b:a ) {
             if (b > max) {
                 max = b;
@@ -122,11 +122,8 @@ public class HomeWork4 {
         double c = 0d;
         for (double b:a ) {
             sum += b;
-            c += 1d;
-          if(c == 30d) {
-              midSum = sum / c;
-            }
         }
+        midSum = sum/ a.length;
         System.out.println(midSum);
     }
 
