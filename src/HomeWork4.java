@@ -40,26 +40,36 @@ public class HomeWork4 {
     }
 
     public static void task3() {
-        System.out.println(" Задача № 3 ");
+        System.out.println("Задача № 3");
         int[] one = new int[3];
         one[0] = 1;
         one[1] = 2;
         one[2] = 3;
         double[] two = {1.57, 7.654, 9.986, 10.01, 11, 1};
         int[] Three = {1, 2, 3, 4, 5, 6, 7, 8, 9,};
-        for (int i = one.length - 1; i >= 0; i--) {
-            System.out.print(" , " + one[i]);
+        for (int a = one.length - 1; a >= 0; a--) {
+            if (a == 0) {
+                System.out.println(one[a]);
+            } else {
+                System.out.print(one[a] + ",");
+            }
         }
-        System.out.println();
         for (int a = two.length - 1; a >= 0; a--) {
-            System.out.print( " , " + two[a]);
+            if (a == 0) {
+                System.out.println(two[a]);
+            } else {
+                System.out.print(two[a] + ",");
+            }
         }
-        System.out.println();
-        for (int d = Three.length - 1; d >= 0; d--) {
-            System.out.print( "," + Three[d]);
+        for (int a = Three.length - 1; a >= 0; a--) {
+            if (a == 0) {
+                System.out.println(Three[a]);
+            } else {
+                System.out.print(Three[a] + ",");
+            }
         }
-        System.out.println();
     }
+
 
     public static void task4() {
         System.out.println(" Задача № 4 ");
@@ -89,9 +99,9 @@ public class HomeWork4 {
         System.out.println(" Задача № 5 ");
         int[] a = generateRandomArray();
         int c = 0;
-       for (int b = 0; b < a.length; b++) {
-           c = c + a[b];
-       }
+        for (int b = 0; b < a.length; b++) {
+            c = c + a[b];
+        }
         System.out.println( " Сумма трат за месяц составила " + c + " рублей. ");
     }
 
@@ -99,7 +109,7 @@ public class HomeWork4 {
         System.out.println(" Задача № 6 ");
         int[] a = generateRandomArray();
         int max = a[0];
-        int min = a [0];
+        int min = a[0];
         for (int b:a ) {
             if (b > max) {
                 max = b;
@@ -123,7 +133,7 @@ public class HomeWork4 {
         for (double b:a ) {
             sum += b;
         }
-        midSum = sum/ a.length;
+        midSum = sum / a.length;
         System.out.println(midSum);
     }
 
@@ -135,7 +145,3 @@ public class HomeWork4 {
         }
     }
 }
-
-
-
-
