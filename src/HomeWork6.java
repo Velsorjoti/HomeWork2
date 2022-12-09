@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Scanner;
 
 public class HomeWork6 {
@@ -31,8 +33,9 @@ public class HomeWork6 {
         int a = scanner.nextInt();
         System.out.println("");
         int b = scanner.nextInt();
+        int LocalDate = 2015;
         chekOs(a);
-        chekYear(b);
+        chekYear(b,LocalDate);
     }
 
     public  static  int chekOs(int a) {
@@ -44,8 +47,8 @@ public class HomeWork6 {
         return a;
     }
 
-    public static int chekYear(int b) {
-      if(b > 2015 ) {
+    public static int chekYear(int b, int LocalDate) {
+      if(b > LocalDate ) {
           System.out.println(" актуальной версии. ");
       } else {
           System.out.println(" облегчёную  версию. ");
