@@ -9,5 +9,7 @@ public class Main {
         Author coolPeterWatts = new Author("Уоттс", "Питер");
         int b = 2009;
         Book fantasticalBlindSight = new Book("Ложная слепота", coolPeterWatts.nameAuthor + coolPeterWatts.familyAuthor, b);
+        int c = 2019;
+        fantasticalBlindSight.setYearPublication(c);
     }
 }
