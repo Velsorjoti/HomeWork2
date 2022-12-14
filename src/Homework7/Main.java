@@ -11,10 +11,6 @@ public class Main {
         Book fantasticalBlindSight = new Book("Ложная слепота",coolPeterWatts , 2009);
         int a = 2019;
         fantasticalBlindSight.setYearPublication(a);
-        System.out.println(" Имя автора: " + coolPeterWatts.nameAuthor + ".");
-        System.out.println(" Новый год публикации: " + fantasticalBlindSight.yearPublication + ".");
-        System.out.println(" Имя автора: " + beatifulSusanaClark.nameAuthor + "." + " Фамилия автора: " + beatifulSusanaClark.familyAuthor);
-        System.out.println(" Имя автора: " + coolPeterWatts.nameAuthor + "." + " Фамилия автора: " + coolPeterWatts.familyAuthor);
         System.out.println(epicJoAndStr);
         System.out.println(fantasticalBlindSight);
         System.out.println(epicJoAndStr.equals(fantasticalBlindSight));

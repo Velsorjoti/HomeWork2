@@ -5,8 +5,8 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Objects;
 
 public class Author {
-    String nameAuthor;
-    String familyAuthor;
+    private String nameAuthor;
+    private String familyAuthor;
 
     public Author (String familyAuthor, String nameAuthor) {
         this.familyAuthor = familyAuthor;
