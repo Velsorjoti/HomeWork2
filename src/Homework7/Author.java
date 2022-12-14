@@ -29,7 +29,7 @@ public class Author {
     }
 
     public  String toString() {
-        return " Имя автора: " + nameAuthor + ". Фамилия Автора: " + familyAuthor + ".";
+        return " Имя автора: " + nameAuthor + ". Фамилия Автора: " + familyAuthor;
     }
 
     public boolean equals( Object obj ) {

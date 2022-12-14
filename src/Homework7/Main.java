@@ -6,15 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
         Author beatifulSusanaClark = new Author("Кларк", "Сюзанна");
-        Book epicJoAndStr = new Book("Джонатан Стренндж и мистер Норелл", "Сюзанна Кларк", 2006);
+        Book epicJoAndStr = new Book("Джонатан Стренндж и мистер Норелл",beatifulSusanaClark, 2006);
         Author coolPeterWatts = new Author("Уоттс", "Питер");
-        Book fantasticalBlindSight = new Book("Ложная слепота", "Питер Уоттс", 2009);
+        Book fantasticalBlindSight = new Book("Ложная слепота",coolPeterWatts , 2009);
         int a = 2019;
         fantasticalBlindSight.setYearPublication(a);
         System.out.println(" Имя автора: " + coolPeterWatts.nameAuthor + ".");
         System.out.println(" Новый год публикации: " + fantasticalBlindSight.yearPublication + ".");
-        System.out.println(" Имя автора: " + beatifulSusanaClark.nameAuthor + "." + " Фамилия автора: " + beatifulSusanaClark.familyAuthor + ".");
-        System.out.println(" Имя автора: " + coolPeterWatts.nameAuthor + "." + " Фамилия автора: " + coolPeterWatts.familyAuthor + ".");
+        System.out.println(" Имя автора: " + beatifulSusanaClark.nameAuthor + "." + " Фамилия автора: " + beatifulSusanaClark.familyAuthor);
+        System.out.println(" Имя автора: " + coolPeterWatts.nameAuthor + "." + " Фамилия автора: " + coolPeterWatts.familyAuthor);
         System.out.println(epicJoAndStr);
         System.out.println(fantasticalBlindSight);
         System.out.println(epicJoAndStr.equals(fantasticalBlindSight));
