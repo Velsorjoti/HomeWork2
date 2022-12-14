@@ -2,10 +2,10 @@ package Homework7;
 
 public class Book {
     private String nameComposition;
-    private String  Author;
+    private Object Author;
     private int yearPublication;
 
-    public Book (String nameComposition, String Author, int yearPublication ) {
+    public Book (String nameComposition,Object Author, int yearPublication ) {
         this.nameComposition = nameComposition;
         this.Author = Author;
         this.yearPublication = yearPublication;
@@ -15,8 +15,8 @@ public class Book {
         return this.nameComposition;
     }
 
-    public String getAuthor() {
-        return  this.Author;
+    public Object  getAuthor() {
+        return this.Author;
     }
 
     public int getYearPublication() {
@@ -26,7 +26,7 @@ public class Book {
         this.nameComposition = nameComposition;
     }
 
-    public void setAuthor (String Author) {
+    public void  setAuthor (Object Author) {
         this.Author = Author;
     }
 
