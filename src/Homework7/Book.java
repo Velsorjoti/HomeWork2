@@ -2,12 +2,12 @@ package Homework7;
 
 public class Book {
      String nameComposition;
-     String author;
+     String Author;
      int yearPublication;
 
-    public Book (String nameComposition, String author, int yearPublication ) {
+    public Book (String nameComposition, String Author, int yearPublication ) {
         this.nameComposition = nameComposition;
-        this.author = author;
+        this.Author = Author;
         this.yearPublication = yearPublication;
     }
 
@@ -16,7 +16,7 @@ public class Book {
     }
 
     public String getauthor() {
-        return  this.author;
+        return  this.Author;
     }
 
     public int getYearPublication() {
@@ -28,7 +28,7 @@ public class Book {
     }
 
     public void  setAuthor () {
-        this.author = author;
+        this.Author = Author;
 
     }
 
@@ -37,7 +37,7 @@ public class Book {
     }
 
     public String toString () {
-        return " Название произведения: " + nameComposition + ". Имя автора: " + author + ". Год публикации: " + yearPublication + ". ";
+        return " Название произведения: " + nameComposition + ". Имя автора: " + Author + ". Год публикации: " + yearPublication + ". ";
     }
 
     public boolean equals(Object other) {
@@ -46,7 +46,7 @@ public class Book {
             return false;
         }
         Book Object = (Book) other;
-        return author.equals(Object.author);
+        return Author.equals(Object.Author);
     }
 
     public int hashCode() {

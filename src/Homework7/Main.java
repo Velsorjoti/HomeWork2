@@ -6,13 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         Author beatifulSusanaClark = new Author("Кларк", "Сюзанна");
-        int a = 2006;
-        Book epicJoAndStr = new Book("Джонатан Стренндж и мистер Норелл", beatifulSusanaClark.nameAuthor + " " + beatifulSusanaClark.familyAuthor, a);
+        Book epicJoAndStr = new Book("Джонатан Стренндж и мистер Норелл", "Сюзанна Кларк", 2006);
         Author coolPeterWatts = new Author("Уоттс", "Питер");
-        int b = 2009;
-        Book fantasticalBlindSight = new Book("Ложная слепота", coolPeterWatts.nameAuthor + " " + coolPeterWatts.familyAuthor, b);
-        int c = 2019;
-        fantasticalBlindSight.setYearPublication(c);
+        Book fantasticalBlindSight = new Book("Ложная слепота", "Питер Уоттс", 2009);
+        int a = 2019;
+        fantasticalBlindSight.setYearPublication(a);
         System.out.println(" Имя автора: " + coolPeterWatts.nameAuthor + ".");
         System.out.println(" Новый год публикации: " + fantasticalBlindSight.yearPublication + ".");
         System.out.println(" Имя автора: " + beatifulSusanaClark.nameAuthor + "." + " Фамилия автора: " + beatifulSusanaClark.familyAuthor + ".");
@@ -29,13 +27,13 @@ public class Main {
         compare(Objects.hash(fantasticalBlindSight),Objects.hash(epicJoAndStr));
     }
 
-    public static int compare(int d, int s) {
-            if (d == s) {
+    public static int compare(int b, int c) {
+            if (b == c) {
                 System.out.println(" Хешкоды  равны. ");
-                return d;
+                return b;
              } else {
                 System.out.println(" Хешкоды не равны. ");
-                return d;
+                return b;
             }
     }
 }
