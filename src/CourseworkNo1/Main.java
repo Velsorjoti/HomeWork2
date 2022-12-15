@@ -23,26 +23,30 @@ public class Main {
         }
     }
 
-    public static int calculatedMinSalaryOfSlave() {
+    public static Employee calculatedMinSalaryOfSlave() {
         int min;
         min = employee[0].getSalaryOfSlaves();
+        int number = 0;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getSalaryOfSlaves() < min) {
                 min = employee[i].getSalaryOfSlaves();
+                number = i;
             }
         }
-        return min;
+        return employee[number];
     }
 
-    public static int calculatedMaxSalaryOfSlave() {
+    public static Employee calculatedMaxSalaryOfSlave() {
         int max;
         max = employee[0].getSalaryOfSlaves();
+        int number = 0;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getSalaryOfSlaves() < max) {
                 max = employee[i].getSalaryOfSlaves();
+                number = i;
             }
         }
-        return max;
+        return employee[number];
     }
     public static int calculatedSumSalaryOfSlave () {
         int sum = 0;
