@@ -27,13 +27,14 @@ public class Main {
     public static int calculatedSumSalaryOfSlave() {
         int sum = 0;
         for (int i = 0; i < employee.length; i++) {
-            sum += employee[i].getSalaryOfSlaves;
+            sum += employee[i].getSalaryOfSlaves();
         }
         return sum;
     }
 
     public static int calculatedMinSalaryOfSlave() {
-        int min = employee[0].getSalaryOfSlaves;
+        int min;
+        min = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
             if (i < min) {
                 min = i;
@@ -42,7 +43,7 @@ public class Main {
         return min;
     }
     public static int calculatedMaxSalaryOfSlave() {
-        int max = employee[0].getSalaryOfSlaves;
+        int max = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
             if (i < max) {
                 max = i;
@@ -54,14 +55,14 @@ public class Main {
         int sum = 0;
         int midsum = 0;
         for (int i = 0; i < employee.length; i++) {
-            sum += employee[i].getSalaryOfSlaves;
+            sum += employee[i].getSalaryOfSlaves();
         }
         midsum = sum / Employee.length;
         return midsum;
     }
     public static String showAllName() {
         for (int i = 0; i < employee.length; i++) {
-            System.out.println(employee[i].getCompleteSurnameNameMiddlename + " ");
+            System.out.println(employee[i].getCompleteSurnameNameMiddlename() + " ");
         }
         return showAllName();
     }
