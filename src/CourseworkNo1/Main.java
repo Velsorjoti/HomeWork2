@@ -15,24 +15,15 @@ public class Main {
         employee[7] = new Employee("Нидокинг Нидоран Нидоринов", 3, 250000);
         employee[8] = new Employee("Виктербел Беллспраут Випенбелов", 4, 160000);
         employee[9] = new Employee("Генгар Гастли Хантерович", 5, 170000);
-        showHonorBoard();
     }
 
     public static void showHonorBoard() {
-        for (Employee employee : employee) {
+        for (Employee employee: employee) {
             System.out.println(employee);
         }
     }
 
-    public static int calculatedSumSalaryOfSlave() {
-        int sum = 0;
-        for (int i = 0; i < employee.length; i++) {
-            sum += employee[i].getSalaryOfSlaves();
-        }
-        return sum;
-    }
-
-    public static int calculatedMinSalaryOfSlave() {
+    public static Employee calculatedMinSalaryOfSlave() {
         int min;
         min = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
@@ -40,34 +31,50 @@ public class Main {
                 min = i;
             }
         }
-        return min;
+        return employee[min];
     }
-    public static int calculatedMaxSalaryOfSlave() {
+
+    public static Employee calculatedMaxSalaryOfSlave() {
         int max = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
             if (i < max) {
                 max = i;
             }
         }
-        return max;
+        return employee[max];
     }
+
+    public static int calculatedSumSalaryOfSlave() {
+        int sum =0;
+        for (int i = 0; i < employee.length; i++) {
+            sum += employee[i].getSalaryOfSlaves();
+        }
+        return sum;
+    }
+
     public static int calculatedMidSalaryOfSlave() {
         int sum = 0;
         int midsum = 0;
         for (int i = 0; i < employee.length; i++) {
             sum += employee[i].getSalaryOfSlaves();
         }
-        midsum = sum / Employee.length;
+        midsum = sum / employee.length;
         return midsum;
     }
+
     public static String showAllName() {
         for (int i = 0; i < employee.length; i++) {
-            System.out.println(employee[i].getCompleteSurnameNameMiddlename() + " ");
+            if (employee[i] == employee[9]) {
+                System.out.println(employee[9].getCompleteSurnameNameMiddlename());
+
+            } else
+                System.out.println(employee[i].getCompleteSurnameNameMiddlename() + "");
         }
         return showAllName();
     }
-
 }
+
+
 
 
 

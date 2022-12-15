@@ -1,7 +1,6 @@
 package CourseworkNo1;
 
 public class Employee {
-    public static int length;
     private String completeSurnameNameMiddlename;
     private int meowDepartament;;
     private int salaryOfSlaves;
@@ -14,30 +13,35 @@ public class Employee {
         this.salaryOfSlaves = salaryOfSlaves;
         idd = counter++;
     }
+
     public String getCompleteSurnameNameMiddlename() {
-        return this.completeSurnameNameMiddlename = completeSurnameNameMiddlename;
+        return completeSurnameNameMiddlename;
     }
+
     public int getMeowDepartament() {
-        return this.meowDepartament = meowDepartament;
+        return meowDepartament;
     }
+
     public int getSalaryOfSlaves() {
-        return this.salaryOfSlaves = salaryOfSlaves;
+        return salaryOfSlaves;
     }
-    public int getIdd() {
-        return this.idd = idd;
-    }
-    public void setCompleteSurnameNameMiddlename(int a) {
+
+    public void setCompleteSurnameNameMiddlename(String completeSurnameNameMiddlename) {
         this.completeSurnameNameMiddlename = completeSurnameNameMiddlename;
     }
-    public void setMeowDepartament(int b) {
+
+    public void setMeowDepartament(int meowDepartament) {
         this.meowDepartament = meowDepartament;
     }
-    public void setSalaryOfSlaves(int c) {
+
+    public void setSalaryOfSlaves(int salaryOfSlaves) {
         this.salaryOfSlaves = salaryOfSlaves;
     }
-    public void setIdd(int a) {
+
+    public void setIdd(int idd) {
         this.idd = idd;
     }
+
     public String toString() {
        return  " ФИО работника: " + completeSurnameNameMiddlename + " . Номер департамента: " + meowDepartament + ". Зарплата работника: " + salaryOfSlaves +  " Idd работника: " + idd + ".";
     }
