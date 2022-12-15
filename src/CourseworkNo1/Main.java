@@ -29,6 +29,7 @@ public class Main {
         for (int i = 0; i < employee.length; i++) {
             if (i < min) {
                 min = i;
+                min = employee[i].getSalaryOfSlaves();
             }
         }
         return employee[min];
@@ -39,6 +40,7 @@ public class Main {
         for (int i = 0; i < employee.length; i++) {
             if (i < max) {
                 max = i;
+                max = employee[i].getSalaryOfSlaves();
             }
         }
         return employee[max];
@@ -52,12 +54,8 @@ public class Main {
         return sum;
     }
 
-    public static int calculatedMidSalaryOfSlave() {
-        int sum = 0;
-        int midsum = 0;
-        for (int i = 0; i < employee.length; i++) {
-            sum += employee[i].getSalaryOfSlaves();
-        }
+    public static int calculatedMidSalaryOfSlave(int sum, int midsum) {
+        calculatedSumSalaryOfSlave();
         midsum = sum / employee.length;
         return midsum;
     }
