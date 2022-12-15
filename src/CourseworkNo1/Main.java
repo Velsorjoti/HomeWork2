@@ -18,12 +18,12 @@ public class Main {
     }
 
     public static void showHonorBoard() {
-        for (Employee employee: employee) {
+        for (Employee employee : employee) {
             System.out.println(employee);
         }
     }
 
-    public static Employee calculatedMinSalaryOfSlave() {
+    public static int calculatedMinSalaryOfSlave() {
         int min;
         min = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
@@ -31,34 +31,34 @@ public class Main {
                 min = employee[i].getSalaryOfSlaves();
             }
         }
-        return employee[min];
+        return min;
     }
 
-    public static Employee calculatedMaxSalaryOfSlave() {
-        int max = employee[0].getSalaryOfSlaves();
+    public static int calculatedMaxSalaryOfSlave() {
+        int max;
+        max = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getSalaryOfSlaves() < max) {
                 max = employee[i].getSalaryOfSlaves();
             }
         }
-        return employee[max];
+        return max;
     }
-
-    public static int calculatedSumSalaryOfSlave() {
-        int sum =0;
+    public static int calculatedSumSalaryOfSlave () {
+        int sum = 0;
         for (int i = 0; i < employee.length; i++) {
             sum += employee[i].getSalaryOfSlaves();
         }
         return sum;
     }
 
-    public static int calculatedMidSalaryOfSlave(int sum, int midsum) {
+    public static int calculatedMidSalaryOfSlave (int sum, int midsum) {
         calculatedSumSalaryOfSlave();
         midsum = sum / employee.length;
         return midsum;
     }
 
-    public static String showAllName() {
+    public static String showAllName () {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] == employee[9]) {
                 System.out.println(employee[9].getCompleteSurnameNameMiddlename());
@@ -69,6 +69,13 @@ public class Main {
         return showAllName();
     }
 }
+
+
+
+
+
+
+
 
 
 
