@@ -27,8 +27,7 @@ public class Main {
         int min;
         min = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
-            if (i < min) {
-                min = i;
+            if (employee[i].getSalaryOfSlaves() < min) {
                 min = employee[i].getSalaryOfSlaves();
             }
         }
@@ -38,8 +37,7 @@ public class Main {
     public static Employee calculatedMaxSalaryOfSlave() {
         int max = employee[0].getSalaryOfSlaves();
         for (int i = 0; i < employee.length; i++) {
-            if (i < max) {
-                max = i;
+            if (employee[i].getSalaryOfSlaves() < max) {
                 max = employee[i].getSalaryOfSlaves();
             }
         }
