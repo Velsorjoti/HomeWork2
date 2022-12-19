@@ -9,13 +9,39 @@ public class Automobile {
     private String country;
 
     public Automobile(String brand, String model, double engineVolume, String color, int year, String country) {
-        this.brand = brand;
-        this.model = model;
-        this.engineVolume = engineVolume;
-        this.color = color;
-        this.year = year;
-        this.country = country;
+        if (this.brand != null || this.brand.length() != 0) {
+            this.brand = brand;
+        } else {
+            this.brand = "Машина";
+        }
+        if (this.model != null || this.model.length() != 0) {
+            this.model = model;
+        } else {
+            this.model = "Классическая";
+        }
+        if (this.engineVolume <= 0) {
+            this.engineVolume = 1.5d;
+        } else {
+            this.engineVolume = engineVolume;
+        }
+        if (this.color != null || this.color.length() != 0) {
+            this.color = color;
+        } else {
+            this.color = "Белый";
+        }
+        if (this.year <= 0) {
+            this.year = 2000;
+        } else {
+            this.year = year;
+        }
+        if (this.country != null || this.country.length() != 0) {
+            this.country = country;
+        } else {
+            this.country = "Россия Матушка";
+        }
     }
+
+
 
     public String getBrand() {
         return brand;
