@@ -184,8 +184,8 @@ public class Automobile {
         this.wintertires = wintertires;
     }
 
-    public boolean changeSeasonTires(boolean wintertires) {
-        if (this.wintertires == 1 ||this.wintertires == 2 ||this.wintertires == 3 ||this.wintertires == 11 ||this.wintertires == 12) {
+    public boolean changeSeasonTires(int a) {
+        if (a == 1 ||a == 2 ||a == 3 ||a == 11 ||a == 12) {
             return true;
         }
         else {
