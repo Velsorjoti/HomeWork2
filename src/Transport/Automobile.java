@@ -72,7 +72,7 @@ public class Automobile {
         }
 
         public void insuranceexpirationdate() {
-            if (this.validityperiod == LocalDate.now()) {
+            if (validityperiod.isBefore(LocalDate.now())) {
                 System.out.println("Ваша страховка просроченна, идите за новой");
             }
         }
