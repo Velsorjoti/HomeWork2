@@ -1,8 +1,8 @@
 package Transport;
 
-import org.w3c.dom.ls.LSOutput;
 
 import java.time.LocalDate;
+import java.util.stream.IntStream;
 
 public class Automobile {
     private final String brand;
@@ -18,22 +18,48 @@ public class Automobile {
     private boolean wintertires;
 
     public static class Key {
-       private final boolean remoteenginestart = true;
-       private final boolean keylessaccess = true;
+        private final boolean remoteenginestart;
+        private final boolean keylessaccess;
+
+        public Key(Boolean remoteenginestart, Boolean keylessaccess) {
+            if (remoteenginestart == null) {
+                remoteenginestart = false;
+            }
+            this.remoteenginestart = remoteenginestart;
+            if (keylessaccess == null) {
+                keylessaccess = false;
+            }
+            this.keylessaccess = keylessaccess;
+        }
+
+        public boolean isRemoteenginestart() {
+            return remoteenginestart;
+        }
+
+        public boolean isKeylessaccess() {
+            return keylessaccess;
+        }
     }
 
-    public static class Insurance {
-       private final int validityperiod = 5;
-       private final String costInsurance;
-       private final int numbInsurance;
 
-        public Insurance(int validityperiod, String costInsurance, int numbInsurance) {
-            validityperiod = 5;
+    public static class Insurance {
+        private final LocalDate validityperiod;
+        private final String costInsurance;
+        private final int numbInsurance;
+
+        public Insurance(LocalDate validityperiod, String costInsurance, int numbInsurance) {
+            this.validityperiod = validityperiod;
+            if (costInsurance == null || costInsurance.length() == 0) {
+                System.out.println("Неверно, попробуйте ещё раз");
+            }
             this.costInsurance = costInsurance;
+            if (numbInsurance == 0 || numbInsurance < 0) {
+                System.out.println("Вы неверно ввели номерстраховки, или её у вас нет");
+            }
             this.numbInsurance = numbInsurance;
         }
 
-        public int getValidityperiod() {
+        public LocalDate getValidityperiod() {
             return validityperiod;
         }
 
@@ -45,14 +71,14 @@ public class Automobile {
             return numbInsurance;
         }
 
-        public  void insuranceexpirationdate() {
-            if (this.validityperiod > 5) {
+        public void insuranceexpirationdate() {
+            if (this.validityperiod == LocalDate.now()) {
                 System.out.println("Ваша страховка просроченна, идите за новой");
             }
         }
 
         public void chekCostInsurance() {
-            if(this.costInsurance.length() != 9){
+            if (this.costInsurance.length() != 9) {
                 System.out.println("Номер страховки некорректный");
             }
         }
@@ -159,9 +185,10 @@ public class Automobile {
     }
 
     public boolean changeSeasonTires(boolean wintertires) {
-        if (this.wintertires) {
+        if (this.wintertires == 1 ||this.wintertires == 2 ||this.wintertires == 3 ||this.wintertires == 11 ||this.wintertires == 12) {
             return true;
-        } else {
+        }
+        else {
             return false;
         }
     }
