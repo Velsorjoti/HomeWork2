@@ -4,13 +4,8 @@ package Transport;
 import java.time.LocalDate;
 import java.util.stream.IntStream;
 
-public class Automobile {
-    private final String brand;
-    private final String model;
+public class Automobile  extends  Transport{
     private double engineVolume;
-    private String color;
-    private final int year;
-    private final String country;
     private String transmission;
     private final String bodystyle;
     private int registrNumber;
@@ -85,26 +80,13 @@ public class Automobile {
     }
 
     public Automobile(String brand, String model, double engineVolume, String color, int year, String country, String transmission, String bodystyle, int registrNumber, int numberSeats, boolean wintertires) {
-        this.brand = brand;
-        this.model = model;
+        super(brand, model,color,year,country);
         if (this.engineVolume <= 0) {
             this.engineVolume = 1.5d;
         } else {
             this.engineVolume = engineVolume;
         }
-        if (this.color != null || this.color.length() != 0) {
-            this.color = color;
-        } else {
-            this.color = "Белый";
-        }
-
-        this.year = year;
-        this.country = country;
-        if (this.transmission != null || this.transmission.length() != 0) {
-            this.transmission = color;
-        } else {
-            this.color = "У вас проблемы с трансимиссией, скорее всего её нет, обратитесь пожалуйста в автосервис.";
-        }
+        this.transmission = transmission;
         this.bodystyle = bodystyle;
         if (this.registrNumber <= 0) {
             System.out.println(" Вы указали несуществующий номер номер, попробуйте ещё раз. ");
@@ -149,7 +131,7 @@ public class Automobile {
     }
 
     public String toString() {
-        return "Имя марки:" + brand + "." + " Имя модели:" + model + "." + " Объём двигателя:" + engineVolume + "." + " Цвет автомобиля:" + color + "." + " Год производства:" + year + "." + " Страна производитель:" + country + ".";
+        return "Имя марки:" + brand + "." + " Имя модели:" + model + "." + " Объём двигателя:" + engineVolume + "." + " Цвет автомобиля:" + color + "." + " Год производства:" + year + "." + " Страна производитель:" + country + "." + "Трансмиссия:" + transmission + ".";
     }
 
     public String getBodystyle() {

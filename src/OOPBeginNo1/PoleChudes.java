@@ -16,6 +16,7 @@ public class PoleChudes {
         Bus uazik = new Bus("Буханочка","Народная","Классический", 1962,"СССР");
         System.out.println(pazik);
         System.out.println(scania);
+
         System.out.println(uazik);
     }
 }
