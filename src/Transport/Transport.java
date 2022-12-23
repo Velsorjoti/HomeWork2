@@ -1,6 +1,7 @@
 package Transport;
 
-public class Transport {
+public class Transport<Driver> {
+    protected Driver driver;
     protected String brand;
     protected String model;
     protected int engineCapacity;
@@ -20,6 +21,14 @@ public class Transport {
             System.out.println("Вы ввели неправильные данные, попробуйте ещё.");
         }
         this.engineCapacity = engineCapacity;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 
     public String getBrand() {

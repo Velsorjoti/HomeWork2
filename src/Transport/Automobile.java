@@ -1,10 +1,8 @@
 package Transport;
 
 
-import java.time.LocalDate;
-import java.util.stream.IntStream;
+public class Automobile extends Transport<DriverB> implements Competing {
 
-public class Automobile extends Transport implements Competing {
     public Automobile(String brand, String model, int engineCapacity) {
         super(brand, model, engineCapacity);
     }
