@@ -1,7 +1,7 @@
 package Transport;
 
-public class Bus extends Transport implements Competing  {
-    public Bus(String brand, String model, int engineCapacity) {
+public class Track extends Transport implements Competing{
+    public Track(String brand, String model, int engineCapacity) {
         super(brand, model, engineCapacity);
     }
 
@@ -27,6 +27,5 @@ public class Bus extends Transport implements Competing  {
 
     @Override
     public void maxSpeed() {
-
     }
 }

@@ -4,174 +4,33 @@ package Transport;
 import java.time.LocalDate;
 import java.util.stream.IntStream;
 
-public class Automobile  extends  Transport{
-    private double engineVolume;
-    private String transmission;
-    private final String bodystyle;
-    private int registrNumber;
-    private final int numberSeats;
-    private boolean wintertires;
-
-    public static class Key {
-        private final boolean remoteenginestart;
-        private final boolean keylessaccess;
-
-        public Key(Boolean remoteenginestart, Boolean keylessaccess) {
-            if (remoteenginestart == null) {
-                remoteenginestart = false;
-            }
-            this.remoteenginestart = remoteenginestart;
-            if (keylessaccess == null) {
-                keylessaccess = false;
-            }
-            this.keylessaccess = keylessaccess;
-        }
-
-        public boolean isRemoteenginestart() {
-            return remoteenginestart;
-        }
-
-        public boolean isKeylessaccess() {
-            return keylessaccess;
-        }
+public class Automobile extends Transport implements Competing {
+    public Automobile(String brand, String model, int engineCapacity) {
+        super(brand, model, engineCapacity);
     }
 
-
-    public static class Insurance {
-        private final LocalDate validityperiod;
-        private final String costInsurance;
-        private final int numbInsurance;
-
-        public Insurance(LocalDate validityperiod, String costInsurance, int numbInsurance) {
-            this.validityperiod = validityperiod;
-            if (costInsurance == null || costInsurance.length() == 0) {
-                System.out.println("Неверно, попробуйте ещё раз");
-            }
-            this.costInsurance = costInsurance;
-            if (numbInsurance == 0 || numbInsurance < 0) {
-                System.out.println("Вы неверно ввели номерстраховки, или её у вас нет");
-            }
-            this.numbInsurance = numbInsurance;
-        }
-
-        public LocalDate getValidityperiod() {
-            return validityperiod;
-        }
-
-        public String getCostInsurance() {
-            return costInsurance;
-        }
-
-        public int getNumbInsurance() {
-            return numbInsurance;
-        }
-
-        public void insuranceexpirationdate() {
-            if (validityperiod.isBefore(LocalDate.now())) {
-                System.out.println("Ваша страховка просроченна, идите за новой");
-            }
-        }
-
-        public void chekCostInsurance() {
-            if (this.costInsurance.length() != 9) {
-                System.out.println("Номер страховки некорректный");
-            }
-        }
+    @Override
+    public void begginMove() {
+        super.begginMove();
     }
 
-    public Automobile(String brand, String model, double engineVolume, String color, int year, String country, String transmission, String bodystyle, int registrNumber, int numberSeats, boolean wintertires) {
-        super(brand, model,color,year,country);
-        if (this.engineVolume <= 0) {
-            this.engineVolume = 1.5d;
-        } else {
-            this.engineVolume = engineVolume;
-        }
-        this.transmission = transmission;
-        this.bodystyle = bodystyle;
-        if (this.registrNumber <= 0) {
-            System.out.println(" Вы указали несуществующий номер номер, попробуйте ещё раз. ");
-        } else {
-            this.registrNumber = registrNumber;
-        }
-        this.numberSeats = numberSeats;
-        this.wintertires = wintertires;
+    @Override
+    public void endMove() {
+        super.endMove();
     }
 
-
-    public String getBrand() {
-        return brand;
+    @Override
+    public void pitStop() {
+        System.out.println("Пит-стоп, ну что тут ещё напишешь");
     }
 
-    public String getModel() {
-        return model;
+    @Override
+    public void bestRingTime() {
+        System.out.println("Лучшее время круга");
     }
 
-    public double getEngineVolume() {
-        return engineVolume;
-    }
+    @Override
+    public void maxSpeed() {
 
-    public String getColor() {
-        return color;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setEngineVolume(double engineVolume) {
-        this.engineVolume = engineVolume;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String toString() {
-        return "Имя марки:" + brand + "." + " Имя модели:" + model + "." + " Объём двигателя:" + engineVolume + "." + " Цвет автомобиля:" + color + "." + " Год производства:" + year + "." + " Страна производитель:" + country + "." + "Трансмиссия:" + transmission + ".";
-    }
-
-    public String getBodystyle() {
-        return bodystyle;
-    }
-
-    public int getNumberSeats() {
-        return numberSeats;
-    }
-
-    public String getTransmission() {
-        return transmission;
-    }
-
-    public void setTransmission(String transmission) {
-        this.transmission = transmission;
-    }
-
-    public int getRegistrNumber() {
-        return registrNumber;
-    }
-
-    public void setRegistrNumber(int registrNumber) {
-        this.registrNumber = registrNumber;
-    }
-
-    public boolean isWintertires() {
-        return wintertires;
-    }
-
-    public void setWintertires(boolean wintertires) {
-        this.wintertires = wintertires;
-    }
-
-    public boolean changeSeasonTires(int a) {
-        if (a == 1 ||a == 2 ||a == 3 ||a == 11 ||a == 12) {
-            return true;
-        }
-        else {
-            return false;
-        }
     }
 }
