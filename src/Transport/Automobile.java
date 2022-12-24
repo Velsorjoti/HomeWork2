@@ -1,34 +1,17 @@
 package Transport;
 
 
-public class Automobile extends Transport<DriverB> implements Competing {
+public class Automobile extends Transport<DriverB> {
 
     public Automobile(String brand, String model, int engineCapacity) {
         super(brand, model, engineCapacity);
     }
 
-    @Override
-    public void begginMove() {
-        super.begginMove();
+    public String getBrand() {
+        return brand;
     }
 
-    @Override
-    public void endMove() {
-        super.endMove();
-    }
-
-    @Override
-    public void pitStop() {
-        System.out.println("Пит-стоп, ну что тут ещё напишешь");
-    }
-
-    @Override
-    public void bestRingTime() {
-        System.out.println("Лучшее время круга");
-    }
-
-    @Override
-    public void maxSpeed() {
-
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 }
