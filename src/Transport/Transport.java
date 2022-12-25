@@ -1,7 +1,7 @@
 package Transport;
 
-public class Transport<Driver> {
-    protected Driver driver;
+public abstract class  Transport<T> implements Competing {
+    protected T driver;
     protected String brand;
     protected String model;
     protected int engineCapacity;
@@ -23,11 +23,11 @@ public class Transport<Driver> {
         this.engineCapacity = engineCapacity;
     }
 
-    public Driver getDriver() {
+    public T getDriver() {
         return driver;
     }
 
-    public void setDriver(Driver driver) {
+    public void setDriver(T driver) {
         this.driver = driver;
     }
 
@@ -82,5 +82,20 @@ public class Transport<Driver> {
                 ", model='" + model + '\'' +
                 ", engineCapacity=" + engineCapacity +
                 '}';
+    }
+
+    @Override
+    public void pitStop() {
+
+    }
+
+    @Override
+    public void bestRingTime() {
+
+    }
+
+    @Override
+    public void maxSpeed() {
+
     }
 }
