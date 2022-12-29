@@ -13,7 +13,7 @@ public class Main
             System.out.println(" Границы отрезка пересечения " + segmentBeginFist + segmentEndFist);
         }
         else if (segmentBeginFist <= segmentBeginSecond && segmentEndFist > segmentEndSecond) {
-            System.out.println(" Границы отрезка  пересечения " + segmentBeginSecond + segmentEndSecond);
+            System.out.println(" Границы отрезка  пересечения " + segmentBeginFist + segmentEndFist);
         }
         else if (segmentBeginFist > segmentBeginSecond && segmentEndFist > segmentEndSecond) {
             System.out.println(" Границы отрезка пересечения " + segmentBeginFist + segmentEndSecond);
